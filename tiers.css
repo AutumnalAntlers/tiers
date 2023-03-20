@@ -1,6 +1,7 @@
 body {
 	background-color: #333;
 	font-family: sans-serif;
+  min-height: calc(100vh - 16px);
 }
 
 .title {
@@ -36,8 +37,6 @@ body {
 
 .tierlist {
 	width: 80%;
-	height: 80vh;
-	overflow: scroll;
 }
 
 .tierlist span {
@@ -105,8 +104,9 @@ span.item {
 .images {
 	display: flex;
 	border: 1px solid #666;
-	height: 200px;
-	overflow-y: auto;
+	min-height: 200px;
+  max-height: 60vh;
+	overflow: scroll;
 	margin-top: 15px;
 	flex-wrap: wrap;
 	flex-grow: 1;
@@ -142,6 +142,9 @@ img.draggable.dragged, .button:active {
 	align-items: center;
 	width: 310px;
 	margin-left: 15px;
+	position: sticky;
+	align-self: flex-start;
+	top: 36px; /* From .title{min-height} */
 }
 
 .bottom-container input {
@@ -187,10 +190,10 @@ img.draggable.dragged, .button:active {
 }
 
 #trash {
-	position: absolute;
-	bottom: 5px;
-	right: 5px;
+	position: sticky;
 	height: 80px;
+	bottom: 13px;
+	margin-left: calc(100% - 80px);
 	opacity: 0.4;
 }
 
