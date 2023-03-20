@@ -36,8 +36,15 @@ body {
 
 .tierlist {
 	width: 80%;
-	height: 80vh;
 	overflow: scroll;
+}
+
+#screenshot-mode-input {
+	display: none;
+}
+
+input#screenshot-mode-input:not(:checked) + .tierlist {
+	height: 80vh;
 }
 
 .tierlist span {
