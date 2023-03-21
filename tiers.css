@@ -44,7 +44,7 @@ body {
 }
 
 input#screenshot-mode-input:not(:checked) + .tierlist {
-	height: 80vh;
+	max-height: 80vh;
 }
 
 .tierlist span {
