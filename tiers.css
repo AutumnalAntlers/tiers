@@ -58,11 +58,11 @@ label.screenshot-mode-label svg:not(:first-child) {
 	right: 10px;
 }
 
-input#screenshot-mode-input:checked ~ * svg.screenshot-mode-svg:nth-child(2) {
+input#screenshot-mode-input:checked ~ * path.screenshot-mode-inactive {
 	display: none;
 }
 
-input#screenshot-mode-input:not(:checked) ~ * label.screenshot-mode-label svg:nth-child(3) {
+input#screenshot-mode-input:not(:checked) ~ * path.screenshot-mode-active {
 	display: none;
 }
 
